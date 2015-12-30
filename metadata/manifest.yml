@@ -1,0 +1,35 @@
+Name: cpj
+
+Cartridge-Short-Name: cpj
+Cartridge-Version: '0.0.1'
+Cartridge-Vendor: mpiech
+
+Display-Name: Clojure (1.7) Compojure
+Description: "Clojure / Compojure cartridge"
+
+Version: '1.7'
+Website: http://www.clojure.org
+
+Categories:
+  - service
+  - web_framework
+  - clojure
+  - compojure
+
+Provides:
+  - clojure-1.7
+  - clojure
+
+Scaling:
+  Min: 1
+  Max: -1
+
+Endpoints:
+  - Private-IP-Name:   HTTP_IP
+    Private-Port-Name: HTTP_PORT
+    Private-Port:      8080
+    Public-Port-Name:  PROXY_HTTP_PORT
+    Mappings:
+      - Frontend:      ""
+        Backend:       ""
+        Options:       { websocket: false }

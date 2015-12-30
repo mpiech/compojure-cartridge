@@ -6,7 +6,7 @@
             [ring.adapter.jetty :refer [run-jetty]]))
 
 (defroutes app-routes
-  (GET "/" [] "Compojure on OpenShift!")
+  (GET "/" [] "Hello World")
   (route/not-found "Not Found"))
 
 (def app
@@ -14,8 +14,8 @@
 
 (defn -main [& args]
   (let [ip (get (System/getenv) 
-                "OPENSHIFT_COMPOJURE_HTTP_IP" "0.0.0.0")
+                "OPENSHIFT_CPJ_HTTP_IP" "0.0.0.0")
         port (Integer/parseInt 
               (get (System/getenv) 
-                   "OPENSHIFT_COMPOJURE_HTTP_PORT" "8080"))]
+                   "OPENSHIFT_CPJ_HTTP_PORT" "8080"))]
     (run-jetty app {:host ip :port port})))

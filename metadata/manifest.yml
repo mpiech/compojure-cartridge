@@ -1,10 +1,10 @@
-Name: cpj
+Name: compojure
 
-Cartridge-Short-Name: cpj
+Cartridge-Short-Name: compojure
 Cartridge-Version: '0.0.1'
 Cartridge-Vendor: mpiech
 
-Display-Name: Clojure (1.7) Compojure
+Display-Name: Clojure 1.7 / Compojure 1.4
 Description: "Clojure / Compojure cartridge"
 
 Version: '1.7'
